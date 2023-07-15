@@ -7,12 +7,12 @@ import './navbar-style.css'
 export default function navbar() {
   return (
   <nav className='navbar font-button' id="menu">
-    <Link to='/'>
+    <Link to='/ProjetoFleetCareFrontEnd'>
       <img src='/logo.png' className='icon'/>
     </Link>
     
     <ul>
-      <CustomLink href='/users'>Usuários</CustomLink>
+      <CustomLink href='/ProjetoFleetCareFrontEnd/users'>Usuários</CustomLink>
     </ul>
   </nav>
   )

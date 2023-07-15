@@ -11,7 +11,7 @@ import './App.css'
 //componentes
 import Navbar from './components/navbar/navbar'
 import Login from './pages/login/login'
-import Users from './pages/users/users'
+import Users from './pages/usuarios/usuarios'
 import Inicio from './pages/inicio/inicio'
 
 
@@ -29,8 +29,8 @@ function App() {
       <>
       <Navbar />
       <Routes>
-        <Route path='/' element = {<Inicio/>}/>
-        <Route path='/users' element = {<Users/>}/>
+        <Route path='/ProjetoFleetCareFrontEnd' element = {<Inicio/>}/>
+        <Route path='/ProjetoFleetCareFrontEnd/users' element = {<Users/>}/>
       </Routes>
       </>
     )
