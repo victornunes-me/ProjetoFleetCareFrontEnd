@@ -1,4 +1,4 @@
-body{
+.bg-login{
   background: var(--Color-neutralSurface);
   background-image:url("/welcome.png");
   background-position: center;

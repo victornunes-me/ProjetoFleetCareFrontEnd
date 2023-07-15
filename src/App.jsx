@@ -12,13 +12,13 @@ import './App.css'
 import Navbar from './components/navbar/navbar'
 import Login from './pages/login/login'
 import Users from './pages/users/users'
-import Home from './pages/home/home'
+import Inicio from './pages/inicio/inicio'
 
 
 function App() {
-  const [isOn, setisOn] = useState(0)
+  const [isActiveLogin, setIsActiveLogin] = useState(0)
 
-  if (isOn == 0){
+  if (isActiveLogin == 1){
     return (
       <>
       <Login/>
@@ -29,7 +29,7 @@ function App() {
       <>
       <Navbar />
       <Routes>
-        <Route path='/' element = {<Home/>}/>
+        <Route path='/' element = {<Inicio/>}/>
         <Route path='/users' element = {<Users/>}/>
       </Routes>
       </>

@@ -6,14 +6,13 @@ import './navbar-style.css'
 
 export default function navbar() {
   return (
-  <nav className='navbar' id="menu">
+  <nav className='navbar font-button' id="menu">
     <Link to='/'>
-      Logo
+      <img src='/logo.png' className='icon'/>
     </Link>
     
     <ul>
       <CustomLink href='/users'>Usuários</CustomLink>
-      <CustomLink href='/modal'>Modal</CustomLink>
     </ul>
   </nav>
   )

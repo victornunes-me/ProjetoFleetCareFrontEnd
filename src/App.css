@@ -2,6 +2,7 @@
 
   /* Color */
   --Color-neutralSurface:#F8F4EA;
+  --Color-NeutralSurfaceBright: #FFFEFC;
   --Color-NeutralOnSurface: #232323;
 
   --Color-Primary: #2D7BB0;
@@ -13,19 +14,112 @@
   --Color-CustomYellow: #F0DB4F;
   --Color-CustomOpacityBlack:#2323234D;
 
+  --Color-Java: linear-gradient(90deg, #0D8AC7 0%, #EC2025 100%)
+
    /* Typografy */
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
    --Font-Headline:'Merriweather', serif;
    --Font-Body: 'Montserrat', sans-serif;
-
-   
-
+   --weightNormal: 400;
+   --weightBold: 700;
+   --headline-family:  Merriweather;
+   --content-family:  Montserrat;
+  
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 }
+
+body{
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--Color-NeutralSurface);
+}
+li,label,p{
+  list-style: none;
+}
+a,label,p{
+  text-decoration: none;
+}
+
+.font-h1{
+font-family: var(--Font-Headline);
+font-size: 96px;
+font-style: normal;
+font-weight: var(--weightNormal);
+line-height: 0;
+letter-spacing: -1.44px;
+}
+
+.font-h2{
+font-family: var(--Font-Headline);
+font-size: 60px;
+font-style: normal;
+font-weight: var(--weightNormal);
+line-height: 0;
+letter-spacing: -0.3px;
+}
+
+.font-h3{
+font-family: var(--Font-Headline);
+font-size: 60px;
+font-style: normal;
+font-weight: var(--weightNormal);
+line-height: 0;
+letter-spacing: -0.3px;
+}
+
+.font-h4{
+font-family: var(--Font-Headline);
+font-size: 40px;
+font-style: normal;
+font-weight: var(--weightNormal);
+line-height: 0;
+letter-spacing: -0.3px;
+}
+
+.font-subtitle1{
+  font-family: var(--Font-Body);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--weightNormal);
+  line-height: 0;
+  }
+
+.font-subtitle2{
+  font-family: var(--Font-Body);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--weightNormal);
+  line-height: 0;
+  }
+
+.font-body{
+  font-family: var(--Font-Body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: var(--weightNormal);
+  line-height: 0;
+  }
+  
+.font-button{
+  font-family: var(--Font-Body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: var(--weightBold);
+  line-height: 0;
+  letter-spacing: 0.21px;
+  text-transform: uppercase;
+  }
+
+.font-button :hover{
+  color:var(--Color-CustomYellow);
+}
+
+
 /**
  color-scheme: light dark;
 @media (prefers-color-scheme: light) {

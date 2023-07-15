@@ -1,5 +1,5 @@
 {
-  "homepage":"https://victornunes-me.github.io/ProjetoFleetCareFrontEnd" ,
+  "homepage": "https://victornunes-me.github.io/ProjetoFleetCareFrontEnd",
   "name": "fleetcarefrontend",
   "private": true,
   "version": "0.0.0",
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1"

@@ -11,6 +11,7 @@ const labelLogin = {
 
 export default function login() {
   return (
+    <div className='bg-login'>
       <section className="login">
         <div className="card">
           <img className="logo" src="/logo.png"/>
@@ -20,6 +21,7 @@ export default function login() {
             <InputDefault label={"Avançar"} />
           </form>
         </div>
-      </section>
+      </section>  
+    </div>
   )
 }
