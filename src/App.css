@@ -1,0 +1,43 @@
+:root {
+
+  /* Color */
+  --Color-neutralSurface:#F8F4EA;
+  --Color-NeutralOnSurface: #232323;
+
+  --Color-Primary: #2D7BB0;
+  --Color-OnPrimary: #EFF6FB;
+
+  --Color-PrimaryContainer:#A5CCE5;
+  --Color-OnPrimaryContainer:#00558E;
+
+  --Color-CustomYellow: #F0DB4F;
+  --Color-CustomOpacityBlack:#2323234D;
+
+   /* Typografy */
+   @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+   --Font-Headline:'Merriweather', serif;
+   --Font-Body: 'Montserrat', sans-serif;
+
+   
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+/**
+ color-scheme: light dark;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+**/
