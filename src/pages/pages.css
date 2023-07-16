@@ -1,0 +1,11 @@
+.content-pages{
+  display: flex;
+  flex-direction: column;
+  padding: 80px 120px;
+}
+.header-page{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 0px;
+}
