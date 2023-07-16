@@ -2,13 +2,14 @@ import React from 'react'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
 import './navbar-style.css'
+import imgLogoURL from '/logo.png'
 
 
 export default function navbar() {
   return (
   <nav className='navbar font-button' id="menu">
     <Link to='/ProjetoFleetCareFrontEnd'>
-      <img src='/logo.png' className='icon'/>
+      <img src={imgLogoURL} className='icon'/>
     </Link>
     
     <ul>

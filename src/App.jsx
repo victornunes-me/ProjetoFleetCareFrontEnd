@@ -17,6 +17,7 @@ import Inicio from './pages/inicio/inicio'
 
 function App() {
   const [isActiveLogin, setIsActiveLogin] = useState(0)
+  
 
   if (isActiveLogin == 1){
     return (
@@ -28,6 +29,7 @@ function App() {
     return (
       <>
       <Navbar />
+      <code>{JSON.stringify(import.meta.env.VITE_REACT_API_BASE_URL_PROD)}</code>
       <Routes>
         <Route path='/ProjetoFleetCareFrontEnd' element = {<Inicio/>}/>
         <Route path='/ProjetoFleetCareFrontEnd/users' element = {<Users/>}/>
