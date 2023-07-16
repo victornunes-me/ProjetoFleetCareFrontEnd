@@ -3,9 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 120px;
+  padding: 8px 120px;
   flex-wrap: wrap;
-  row-gap: 10px;
+  row-gap: 18px;
   align-content: center;
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.10);
 }
@@ -15,8 +15,8 @@
 }
 
 .icon {
-  width: 80px;
-  height: 60px;
+  width: 180px;
+  height: 38px;
   flex-shrink: 0;
 }
 

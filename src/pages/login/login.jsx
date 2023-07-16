@@ -15,8 +15,8 @@ export default function login() {
     <div className='bg-login'>
       <section className="login">
         <div className="card">
-          <img className="logo" src={imgLogoURL}/>
-          <h4>Fazer Login</h4> 
+          <img className="icon-login" src={imgLogoURL}/>
+          <h4 className='font-subtitle1 colorNeutralOnSurface'>Faça o login para começar</h4> 
           <form className="formulario">
             <TextFieldDefault email={labelLogin.label} placeholder={labelLogin.placeholder} />
             <InputDefault label={"Avançar"} />

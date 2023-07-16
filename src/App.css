@@ -4,17 +4,28 @@
   --Color-neutralSurface:#F8F4EA;
   --Color-NeutralSurfaceBright: #FFFEFC;
   --Color-NeutralOnSurface: #232323;
+  --Color-NeutralOnSurfaceVar: #4D4D4D;
+  --Color-NeutralOutline: #A9A59A;
+  --Color-NeutralSurfaceDim: #E4E4E3;
 
-  --Color-Primary: #2D7BB0;
+  --Color-Primary: #365980;
   --Color-OnPrimary: #EFF6FB;
-
   --Color-PrimaryContainer:#A5CCE5;
-  --Color-OnPrimaryContainer:#00558E;
+  --Color-OnPrimaryContainer:#587CA6;
 
-  --Color-CustomYellow: #F0DB4F;
+  --Color-Custom: #C0E8FD;
+
   --Color-CustomOpacityBlack:#2323234D;
+  --Color-CustomOpacityWhite:#ffffff4e;
 
-  --Color-Java: linear-gradient(90deg, #0D8AC7 0%, #EC2025 100%)
+  --Color-OnErrorContainer:#73050B;
+  --Color-Error:#B6411B;
+  --Color-OnError: #FFFBFB;
+
+  --Color-OnSucessContainer:#006E46;
+  --Color-Sucess:#3EDCA3;
+  --Color-SucessConteiner:#DBF3EA;
+
 
    /* Typografy */
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
@@ -36,7 +47,7 @@ body{
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: var(--Color-NeutralSurface);
+  background-color: var(--Color-neutralSurface);
 }
 li,label,p{
   list-style: none;
@@ -83,7 +94,7 @@ letter-spacing: -0.3px;
 
 .font-subtitle1{
   font-family: var(--Font-Body);
-  font-size: 16px;
+  font-size: 32px;
   font-style: normal;
   font-weight: var(--weightNormal);
   line-height: 0;
@@ -91,7 +102,7 @@ letter-spacing: -0.3px;
 
 .font-subtitle2{
   font-family: var(--Font-Body);
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: var(--weightNormal);
   line-height: 0;
@@ -99,7 +110,7 @@ letter-spacing: -0.3px;
 
 .font-body{
   font-family: var(--Font-Body);
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: var(--weightNormal);
   line-height: 0;
@@ -119,6 +130,64 @@ letter-spacing: -0.3px;
   color:var(--Color-CustomYellow);
 }
 
+.color-neutralSurface{
+  color: var(--Color-neutralSurface);
+}
+.color-neutralSurfaceBright{
+  color: var(--Color-NeutralSurfaceBright);
+}
+.color-neutralOnSurface{
+  color: var(--Color-NeutralOnSurface);
+}
+
+.color-neutralOnSurfaceVar{
+  color: var(--Color-NeutralOnSurfaceVar);
+}
+.color-neutralOutline{
+  color: var(--Color-NeutralOutline);
+}
+.color-neutralSurfaceDim{
+  color: var(--Color-NeutralSurfaceDim);
+}
+.color-primary{
+  color: var(--Color-Primary);
+}
+.color-onPrimary{
+  color: var(--Color-OnPrimary);
+}
+.color-primaryContainer{
+  color: var(--Color-PrimaryContainer);
+}
+.color-onPrimaryContainer{
+  color: var(--Color-OnPrimaryContainer);
+}
+.color-custom{
+  color: var(--Color-Custom);
+}
+.color-customOpacityBlack{
+  color: var(--Color-CustomOpacityBlack);
+}
+.color-customOpacityWhite{
+  color: var(--Color-CustomOpacityWhite);
+}
+.color-onErrorContainer{
+  color: var(--Color-OnErrorContainer);
+}
+.color-error{
+  color: var(--Color-Error);
+}
+.color-OnError{
+  color: var(--Color-OnError);
+}
+.color-onSucessContainer{
+  color: var(--Color-OnSucessContainer);
+}
+.color-sucess{
+  color: var(--Color-Sucess);
+}
+.color-sucessConteiner{
+  color: var(--Color-SucessConteiner);
+}
 
 /**
  color-scheme: light dark;
