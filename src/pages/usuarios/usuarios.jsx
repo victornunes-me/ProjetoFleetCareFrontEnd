@@ -1,16 +1,37 @@
 import React from 'react'
-import '../pages.css'
-import Table from '../../components/table/table'
 
-export default function modal() {
+import '../pages.css'
+import {useFetchAxios} from '../../hooks/useFetch/'
+import Breadcrumber from '../../components/breadcrumber/breadcrumber'
+
+export default function UsuariosPage() {
+  const breadcrumberList = {
+    "pageName": ["inicio","usuários"],
+    "linkURL": ["/ProjetoFleetCareFrontEnd/","/ProjetoFleetCareFrontEnd/usuarios"]
+  }
+
+  const {data: repos, isFetching} = useFetchAxios('api/v1/usuario/listar/0')
+  //console.log(repos,isFetching)
   return (
-    <>
-    <section className='content-pages'>
+  <>
+    <section className='content-pages'>    
       <div className='header-pages'>
-        <p className='font-subtitle1 color-primary'>usuários</p>
+        <Breadcrumber props={breadcrumberList} />
       </div>
     </section>
-    <Table />
-    </>
+    <ul>
+      {isFetching && <p>caregando....</p>}
+      {!isFetching && repos &&
+       repos.map(repo => {
+        return(
+          <li key={repo.usuarioID}>
+            <strong>{repo.nome}</strong>
+            <strong>{repo.cpf}</strong>
+            <strong>{repo.email}</strong>
+          </li>
+        )
+      })}
+    </ul>
+  </>
   )
 }

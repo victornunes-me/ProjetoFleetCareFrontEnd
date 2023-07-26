@@ -1,7 +1,6 @@
 import React from 'react'
-import '../pages.css'
-import Table from '../../components/table/table'
-
+import Button from '@mui/material/Button';
+import { Container, Typography, Box } from '@mui/material';
 //*assim que passa o css para o componente
 //const BACKGROUND_STYLE = {
 //  backgroundColor: 'rgb(0,0,0,0.7)',
@@ -10,13 +9,20 @@ import Table from '../../components/table/table'
 export default function inicio() {
   return (
     <>
-    <section className='content-pages'>
-      <div className='header-pages'>
-        <p className='font-subtitle1 color-customOpacityBlack'>inicio</p>
-        <h1 className='font-h3 color-neutralOnSurface'>Boas vindas, Nome</h1>
-      </div>
-    </section>
-    <Table />
+    <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', p:8, gap:2}}>
+        <Typography variant='h6' >
+          inicio
+        </Typography>
+        <Typography variant='h3' >
+          Boas vindas, Nome
+       </Typography>
+       <Box sx={{display: 'flex', flexDirection: 'row', justifyContent:"space-between"}}>
+        <Button variant="outlined" size="large" pacing={1} href="/ProjetoFleetCareFrontEnd/usuarios">Usuários</Button>
+       </Box>
+      </Container>
+ 
+        
+  
     </>
   )
 }

@@ -1,6 +1,20 @@
+body{
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--Color-neutralSurface);
+}
+li,label,p{
+  list-style: none;
+}
+a,label,p{
+  text-decoration: none;
+}
+
+/**
 :root {
 
-  /* Color */
+
   --Color-neutralSurface:#F8F4EA;
   --Color-NeutralSurfaceBright: #FFFEFC;
   --Color-NeutralOnSurface: #232323;
@@ -27,7 +41,7 @@
   --Color-SucessConteiner:#DBF3EA;
 
 
-   /* Typografy */
+ 
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
    --Font-Headline:'Merriweather', serif;
    --Font-Body: 'Montserrat', sans-serif;
@@ -188,6 +202,17 @@ letter-spacing: -0.3px;
 .color-sucessConteiner{
   color: var(--Color-SucessConteiner);
 }
+
+.flex{
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-row{
+  flex-direction: row;
+}
+**/
 
 /**
  color-scheme: light dark;
