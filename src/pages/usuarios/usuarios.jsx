@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TableMui from '../../components/table/table';
+import TableMui from '../../components/table/';
 //import {useFetchAxios} from '../../hooks/useFetch/'
 //import Breadcrumber from '../../components/breadcrumber/breadcrumber'
 const usuarios = [
