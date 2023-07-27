@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 import { Container, Typography, Box } from '@mui/material';
+import { Link} from 'react-router-dom'
+import { theme } from '../../theme';
 //*assim que passa o css para o componente
 //const BACKGROUND_STYLE = {
 //  backgroundColor: 'rgb(0,0,0,0.7)',
@@ -17,7 +19,9 @@ export default function inicio() {
           Boas vindas, Nome
        </Typography>
        <Box sx={{display: 'flex', flexDirection: 'row', justifyContent:"space-between"}}>
-        <Button variant="outlined" size="large" pacing={1} href="/ProjetoFleetCareFrontEnd/usuarios">Usuários</Button>
+        <Link to={'/ProjetoFleetCareFrontEnd/usuarios'}>
+              <Typography variant='button' color={theme.palette.primary.main} sx={{p:4}}>Usuários</Typography>
+        </Link>
        </Box>
       </Container>
  
