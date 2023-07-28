@@ -1,7 +1,42 @@
 import React from 'react'
-
+import { Link} from 'react-router-dom'
+import Button from '@mui/material/Button';
+import { theme } from '../../theme';
 
 import './button-style.css'
+
+
+export function ButtonMuiPrimary(props) {
+  const link = props.toLink
+  const nome = props.text
+  return (
+    <Link to={link}>
+      <Button variant='contained'>{nome}</Button>
+    </Link>
+    
+  )
+}
+export function ButtonMuiSecundary(props) {
+  const link = props.toLink
+  const nome = props.text
+  return (
+    <Link to={link}>
+      <Button variant='outlined'>{nome}</Button>
+    </Link>
+    
+  )
+}
+export function ButtonMuiTerciary(props) {
+  const link = props.toLink
+  const nome = props.text
+  const color = props.color
+  return (
+    <Link to={link}>
+      <Button variant='text' color={color} >{nome}</Button>
+    </Link>
+    
+  )
+}
 
  export function TextFieldDefault(props) {
   return (

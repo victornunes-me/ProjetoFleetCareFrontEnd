@@ -10,9 +10,11 @@ import './App.css'
 
 //componentes
 import Navbar from './components/navbar/'
-import Login from './pages/login/login'
-import Usuarios from './pages/usuarios/usuarios'
-import Inicio from './pages/inicio/inicio'
+import Login from './pages/login/login/'
+import Usuarios from './pages/usuarios/'
+import Inicio from './pages/inicio/'
+
+import { Box } from '@mui/material'
 
 import { ThemeProvider} from '@mui/material/styles';
 import { theme } from './theme'
@@ -35,12 +37,30 @@ function App() {
     return (
       <>
       <ThemeProvider theme={theme}>
-      <Navbar />
-      <Routes>
-        <Route path='/ProjetoFleetCareFrontEnd' element = {<Inicio/>}/>
-        <Route path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
-        <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Login/>}/>
-      </Routes>
+      
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: '32px repeat(3, auto) 32px',
+          rowGap: 4,
+          gridTemplateRows: 'auto',
+          gridTemplateAreas: `
+          "header header header header header"
+          ". main main main ."
+          "footer footer footer footer footer"`,
+          }}
+      >
+        <Box sx={{ gridArea: 'header'}}><Navbar /></Box>
+        <Box sx={{ gridArea: 'main'}}>
+          <Routes>
+            <Route path='/ProjetoFleetCareFrontEnd' element = {<Inicio/>}/>
+            <Route path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
+            <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Login/>}/>
+          </Routes>
+        </Box>
+        <Box sx={{ gridArea: 'footer'}}></Box>
+      </Box>
+      
       </ThemeProvider>
     
       </>
