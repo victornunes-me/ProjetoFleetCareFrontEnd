@@ -11,8 +11,8 @@ import Paper from '@mui/material/Paper';
 export default function tableMui(rows) {
   const data = rows.props
      return (
-      <TableContainer component={Paper} sx={{padding:4}}>
-        <Table sx={{ minWidth: 600, }} aria-label="users table">
+      <TableContainer component={Paper} >
+        <Table sx={{ minWidth: 300, }} aria-label="users table">
           <TableHead>
             <TableRow>
               <TableCell>Usuário</TableCell>

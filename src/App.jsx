@@ -41,13 +41,13 @@ function App() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: '32px repeat(3, auto) 32px',
+          gridTemplateColumns: 'repeat(12, auto)',
           rowGap: 4,
           gridTemplateRows: 'auto',
           gridTemplateAreas: `
-          "header header header header header"
-          ". main main main ."
-          "footer footer footer footer footer"`,
+          "header header header header header header header header header header header header"
+          ". main main main main main main main main main main ."
+          "footer footer footer footer footer footer footer footer footer footer footer footer"`,
           }}
       >
         <Box sx={{ gridArea: 'header'}}><Navbar /></Box>

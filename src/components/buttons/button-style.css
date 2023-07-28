@@ -1,71 +1,11 @@
-
-/* text input */
-.text-input{
+.Button-alt{
   display: flex;
-  padding: 4px 0px 4px 16px;
-  align-items: center;
-  align-self: stretch;
-  width: 600px;
-  height: 56px;
-  min-width: 280px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
-  
- }
- .text-label{
-  font-family: var(--Font-Body);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.035px;
-  padding: 0px 8px 0px 8px;
-  margin: 0px 16px;
-  border-radius: 2px 2px 2px 2px;
- }
-
-
-/* text input default  */
- .input-default{
-  border: 2px solid var(--color-custom-opacity-black, rgba(35, 35, 35, 0.30));
-  border-color: var(--Color-PrimaryContainer);
-  background: var(--Color-neutralSurface);
-  border-radius: 8px;
-
- }
-
- ::placeholder{
-  color: var(--Color-PrimaryContainer);
- }
- 
- .label-default{
-  color: var(--Color-OnPrimary);
-  display: flex;
-  align-items: center;
-  background: var(--Color-Primary);
-  width: fit-content;
- }
-
-/* button*/
-.bt-primary{
-  display: flex;
-  height: 56px;
-  min-width: 280px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: var(--Color-Primary);
-  flex-direction: column;
+  height: 48px;
+  padding: 0px 16px;
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.10);
+  background:  rgba(255, 255, 255, 0.30);
   justify-content: center;
   align-items: center;
   gap: 8px;
-  align-self: stretch;
-  color: var(--Color-OnPrimary);
-  border: 1px solid var(--color-custom-opacity-black, rgba(35, 35, 35, 0.30));
-  border-color: var(--Color-Primary);
+  color:  #365980;
 }
-.bt-primary:hover{
-  background: var(--Color-OnPrimaryContainer);
-}
-
- 

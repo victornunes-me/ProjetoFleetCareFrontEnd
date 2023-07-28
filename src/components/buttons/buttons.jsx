@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { theme } from '../../theme';
 
 import './button-style.css'
+import { Typography } from '@mui/material';
 
 
 export function ButtonMuiPrimary(props) {
@@ -16,6 +17,18 @@ export function ButtonMuiPrimary(props) {
     
   )
 }
+
+export function ButtonMuiPrimaryAlt(props) {
+  const link = props.toLink
+  const nome = props.text
+  return (
+    <Link to={link}>
+      <Button  className='Button-alt'>{nome}</Button>
+    </Link>
+    
+  )
+}
+
 export function ButtonMuiSecundary(props) {
   const link = props.toLink
   const nome = props.text
