@@ -7,6 +7,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Chip, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
 
 export default function tableMui(rows) {
   const data = rows.props
@@ -14,12 +17,12 @@ export default function tableMui(rows) {
       <TableContainer component={Paper} >
         <Table sx={{ minWidth: 300, }} aria-label="users table">
           <TableHead>
-            <TableRow>
-              <TableCell>Usuário</TableCell>
-              <TableCell align="left">CPF</TableCell>
-              <TableCell align="left">Email</TableCell>
-              <TableCell align="left">Telefone</TableCell>
-              <TableCell align="left">Status</TableCell>
+            <TableRow >
+              <TableCell><Typography variant='subtitle1'>Usuário</Typography></TableCell>
+              <TableCell align="left"><Typography variant='subtitle1'>CPF</Typography></TableCell>
+              <TableCell align="left"><Typography variant='subtitle1'>Email</Typography></TableCell>
+              <TableCell align="left"><Typography variant='subtitle1'>Telefone</Typography></TableCell>
+              <TableCell align="left"><Typography variant='subtitle1'>Status</Typography></TableCell>
             </TableRow>
           </TableHead>
         <TableBody>
@@ -34,7 +37,12 @@ export default function tableMui(rows) {
               <TableCell align="left">{row.cpf}</TableCell>
               <TableCell align="left">{row.email}</TableCell>
               <TableCell align="left">{row.whatsapp}</TableCell>
-              <TableCell align="left">{row.status}</TableCell>
+              <TableCell align="left">
+                <Chip 
+                  label={row.status} 
+                  color={(row.status=='ativo') ? 'success': 'error'}  
+                />
+              </TableCell>
             </TableRow>
         ))}
         </TableBody>
