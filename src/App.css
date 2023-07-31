@@ -17,6 +17,10 @@ a,label,p{
   color: #365980;
 }
 
+.space-menu{
+  padding: 40px;
+}
+
 
 /**
 :root {

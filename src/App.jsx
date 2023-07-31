@@ -9,7 +9,7 @@ import './App.css'
 //import viteLogo from '/vite.svg'
 
 //componentes
-import Navbar from './components/navbar/'
+import Navbar from './components/navbar'
 import { Box } from '@mui/material'
 import { ThemeProvider} from '@mui/material/styles';
 import { theme } from './theme'
@@ -30,7 +30,7 @@ function App() {
       <ThemeProvider theme={theme}>
       <Routes>
         <Route path="*" element={<NotFound/>} />
-        <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Login/>}/>
+        <Route path='/ProjetoFleetCareFrontEnd/index.html:inicio' element = {<Login/>}/>
       </Routes>
       </ThemeProvider>
       </>
@@ -52,13 +52,14 @@ function App() {
           "footer footer footer footer footer footer footer footer footer footer footer footer"`,
           }}
       >
-        <Box sx={{ gridArea: 'header'}}><Navbar /></Box>
+        <Box sx={{ gridArea: 'header',position:'sticky' }}><Navbar /></Box>
         <Box sx={{ gridArea: 'main'}}>
           <Routes>
-            <Route path="*" element={<NotFound/>} />
-            <Route path='/ProjetoFleetCareFrontEnd' element = {<Inicio/>}/>
+            <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>} />
+
+            <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Inicio/>}/>
             <Route path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
-            <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Login/>}/>
+            <Route path='/ProjetoFleetCareFrontEnd/login' element = {<Login/>}/>
           </Routes>
         </Box>
         <Box sx={{ gridArea: 'footer'}}></Box>
