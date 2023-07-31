@@ -10,14 +10,15 @@ import './App.css'
 
 //componentes
 import Navbar from './components/navbar/'
-import Login from './pages/login/login/'
-import Usuarios from './pages/usuarios/'
-import Inicio from './pages/inicio/'
-
 import { Box } from '@mui/material'
-
 import { ThemeProvider} from '@mui/material/styles';
 import { theme } from './theme'
+
+//pages
+import Login from './pages/login'
+import Usuarios from './pages/usuarios'
+import Inicio from './pages/inicio'
+import NotFound from './notFound'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <>
       <ThemeProvider theme={theme}>
       <Routes>
+        <Route path="*" element={<NotFound/>} />
         <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Login/>}/>
       </Routes>
       </ThemeProvider>
@@ -53,6 +55,7 @@ function App() {
         <Box sx={{ gridArea: 'header'}}><Navbar /></Box>
         <Box sx={{ gridArea: 'main'}}>
           <Routes>
+            <Route path="*" element={<NotFound/>} />
             <Route path='/ProjetoFleetCareFrontEnd' element = {<Inicio/>}/>
             <Route path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
             <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Login/>}/>
