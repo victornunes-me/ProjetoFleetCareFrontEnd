@@ -1,12 +1,9 @@
 //react
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 //arquivos
 import './App.css'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
 
 //componentes
 import Navbar from './components/navbar'
@@ -54,13 +51,12 @@ function App() {
       >
         <Box sx={{ gridArea: 'header',position:'sticky' }}><Navbar /></Box>
         <Box sx={{ gridArea: 'main'}}>
-          <Routes>
-            <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>} />
-
-            <Route path='/ProjetoFleetCareFrontEnd/inicio' element = {<Inicio/>}/>
-            <Route path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
-            <Route path='/ProjetoFleetCareFrontEnd/login' element = {<Login/>}/>
-          </Routes>
+            <Routes basename='/ProjetoFleetCareFrontEnd'>
+              <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>} />
+              <Route exact path='/ProjetoFleetCareFrontEnd/' element = {<Inicio/>}/>
+              <Route exact path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
+              <Route exact path='/ProjetoFleetCareFrontEnd/login' element = {<Login/>}/>
+            </Routes>
         </Box>
         <Box sx={{ gridArea: 'footer'}}></Box>
       </Box>
