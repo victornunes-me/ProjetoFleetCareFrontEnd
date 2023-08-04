@@ -21,6 +21,15 @@ a,label,p{
   padding: 40px;
 }
 
+.flex{
+  display: flex;
+}
+
+.flexWrap{
+  flex-wrap: wrap;
+}
+
+
 
 /**
 :root {

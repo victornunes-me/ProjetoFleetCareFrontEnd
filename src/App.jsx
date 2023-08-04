@@ -16,6 +16,7 @@ import Login from './pages/login'
 import Usuarios from './pages/usuarios'
 import Inicio from './pages/inicio'
 import NotFound from './notFound'
+import Usuario from './pages/usuario'
 
 
 function App() {
@@ -37,28 +38,20 @@ function App() {
       <>
       <ThemeProvider theme={theme}>
       
-      <Box
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(12, auto)',
-          rowGap: 4,
-          gridTemplateRows: 'auto',
-          gridTemplateAreas: `
-          "header header header header header header header header header header header header"
-          ". main main main main main main main main main main ."
-          "footer footer footer footer footer footer footer footer footer footer footer footer"`,
-          }}
-      >
-        <Box sx={{ gridArea: 'header',position:'sticky' }}><Navbar /></Box>
-        <Box sx={{ gridArea: 'main'}}>
+      <Box>
+        <Box className='flex' sx={{ position:'sticky' }}><Navbar /></Box>
+        <Box className='boxContent'>
             <Routes basename='/ProjetoFleetCareFrontEnd'>
               <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>} />
               <Route exact path='/ProjetoFleetCareFrontEnd/' element = {<Inicio/>}/>
-              <Route exact path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
               <Route exact path='/ProjetoFleetCareFrontEnd/login' element = {<Login/>}/>
+
+              <Route exact path='/ProjetoFleetCareFrontEnd/usuarios' element = {<Usuarios/>}/>
+              <Route path='/ProjetoFleetCareFrontEnd/usuario/*' element = {<Usuario/>}/>
+              
             </Routes>
         </Box>
-        <Box sx={{ gridArea: 'footer'}}></Box>
+        <Box></Box>
       </Box>
       
       </ThemeProvider>
