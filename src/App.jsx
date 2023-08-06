@@ -1,6 +1,6 @@
 //react
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 //arquivos
 import './App.css'
@@ -32,10 +32,10 @@ function App() {
             
             //Login e 404 
             <Route exact path='/ProjetoFleetCareFrontEnd/login' element = {<Login/>}/>
-            <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>}/>
+           <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>}/>
              
             //inicio 
-            <Route exact path='/ProjetoFleetCareFrontEnd/' 
+            <Route exact path='/ProjetoFleetCareFrontEnd/inicio' 
               element = {
               <ProtectedLayout>
                  <Box className='flex' sx={{ position:'sticky' }}><AuthNavbar/></Box>
