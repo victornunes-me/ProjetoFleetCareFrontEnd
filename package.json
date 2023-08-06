@@ -1,7 +1,7 @@
 {
   "homepage": "https://victornunes-me.github.io/ProjetoFleetCareFrontEnd/",
   "name": "fleetcarefrontend",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
