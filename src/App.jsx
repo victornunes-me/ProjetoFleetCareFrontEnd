@@ -1,6 +1,6 @@
 //react
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
 //arquivos
 import './App.css'
@@ -28,11 +28,10 @@ function App() {
       <ThemeProvider theme={theme}>
         
       <Box>
-            <Routes basename='/ProjetoFleetCareFrontEnd'>
-            
+        <Routes> 
             //Login e 404 
-            <Route exact path='/ProjetoFleetCareFrontEnd/login' element = {<Login/>}/>
-           <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>}/>
+          <Route exact path='/ProjetoFleetCareFrontEnd/' element = {<Login/>}/>
+          <Route path="/ProjetoFleetCareFrontEnd/*" element={<NotFound/>}/>
              
             //inicio 
             <Route exact path='/ProjetoFleetCareFrontEnd/inicio' 
@@ -60,8 +59,7 @@ function App() {
                 <Box className='boxContent'>  <Usuario/> </Box>
               </ProtectedLayout>
               }/>
-              
-            </Routes>
+        </Routes>
       </Box>
       </ThemeProvider>
       </AuthProvider>
